@@ -1,0 +1,36 @@
+
+.blog-card{
+  display: flex;
+ 
+}
+main{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.card-left h2{
+    color: #02527c;
+  font-size: 24px;
+  font-family: neuzeit-grotesk,sans-serif;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -.48px;
+}
+.card-left p{
+    color: #585858;
+  font-size: 18px;
+  font-family: ff-real-text-pro,sans-serif;
+  line-height: 28px;
+  letter-spacing: 0;
+
+}
+.divide{
+    width: 1px;
+    background-color: #585858;
+    height:1px;
+}
+.blog-wrapper{
+    display: flex;
+    flex-direction: column;
+}
