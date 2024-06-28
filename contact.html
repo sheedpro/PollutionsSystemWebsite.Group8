@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Water Treatment System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="products.html">Products/Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="404.html">Error 404</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+                <li><a href="cart.html">Shopping Cart/Checkout</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="have-a-problem-section">
+            <div class="problem-content">
+                <h2>Need Help Now?</h2>
+                <p>For a faster response, please call our sales team directly.</p>
+                <button>+276 785049745</button>
+            </div>
+        </div>
+        <div class="contact-information">
+            <h2>Contact information</h2>
+            <div>
+                <h3></h3>
+                <p>Address: cosis , makerere, Uganda</p>
+                <p>Email: san12williams@gmail.com</p>
+                <p>Phone: +276 785049745</p>
+            </div>
+                    </div>
+        <div id="map" style="width:600px; height: 400px; margin-top:10%"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Water Treatment System</p>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg7FC_Xq-sW7TjdkNBgqxX7iIHPGS92Dw&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = {lat: 47.490, lng: -117.585};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>
