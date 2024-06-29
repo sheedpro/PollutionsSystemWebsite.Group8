@@ -105,6 +105,13 @@ align-items: center;
     align-items: center;
     text-align: center;
 }
+.problem-content p{
+    color: #fcfcfc;
+    font-size: 18px;
+    font-family: ff-real-text-pro,sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+}
 .problem-content  button{
     display: inline-block;
     padding: 12px 20px;
@@ -267,5 +274,28 @@ align-items: center;
     z-index: 1000;
 }
 
-    
-    
+.text-bg{
+    background:linear-gradient(270deg,#3fb871,#f7b618,#3fb871,#3fb871);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-information h2{
+    color: #02527c;
+    font-size: 24px;
+    font-family: neuzeit-grotesk,sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -.48px;
+}
+.contact-information p{
+    color: #585858;
+    font-size: 18px;
+    font-family: ff-real-text-pro,sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
