@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Water Treatment System</title>
     <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
 <body>
     <header>
-        
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -19,7 +19,7 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="terms.html">Terms and Conditions</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="404.html">Error 404</a></li>
+                <li><a href="404.html">Error 404</a></li>
                 <li><a href="login.html">Login/Register</a></li>
                 <li><a href="cart.html">Shopping Cart/Checkout</a></li>
                 <li><a href="search.html">Search</a></li>
@@ -27,50 +27,126 @@
         </nav>
     </header>
     <main>
-        <section class="hero-section">
+        <section class="hero-section" data-animation='{"translateX": [-1000, 0], "opacity": [0, 1], "duration": 1000, "easing": "easeOutQuad"}'>
             <div class="hero-left">
                 <h2>The polluted water treatment and management system</h2>
-            <p>The pollutant water treatment and management system is designed to collect, record and analyze
-                water quality data, pollution sources and sanitation infrastructures that is septic tanks among others .</p>
-                <button>Learn more</button>
+                <p>The pollutant water treatment and management system is designed to collect, record and analyze
+                    water quality data, pollution sources and sanitation infrastructures that is septic tanks among others.</p>
+                <button id="loginBtn">Learn more</button>
             </div>
-            <div class="hero-image">
-                <img src="Assets/Images/water pollution.jpeg" alt="About Us">
+            <div id="loginPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                       
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Login</button>
+                       
+                        
+                    </form>
+                </div>
             </div>
-            
+        
+            <div id="overlay"></div>
+            <div class="hero-image" data-animation='{"translateX": [1000, 0], "opacity": [0, 1], "duration": 1000, "easing": "easeOutQuad", "delay": 500}'>
+                <img src="Assets/Images/faq-accordion-main-main/assets/images/WhatsApp_Image_2024-06-29_at_09.50.19-removebg-preview.png" alt="About Us">
+            </div>
         </section>
         <div class="divider"></div>
-        <div class="about-the-system">
-            <div class="hero-image">
-                <img src="images/about.jpg" alt="About Us">
+        <div class="about-the-system" data-animation='{"translateY": [100, 0], "opacity": [0, 1], "duration": 1000, "easing": "easeOutQuad"}'>
+            <div class="about-image">
+                <img src="Assets/Images/faq-accordion-main-main/assets/images/WhatsApp Image 2024-06-29 at 09.55.26.jpeg" alt="About Us">
             </div>
-            
             <div class="hero-left">
                 <h2>About the System</h2>
-            <p>The polluted water treatment and management system is designed to collect, record and analyze
-                water quality data, pollution sources and sanitation infrastructures that is septic tanks etc. the 
-                system utilizes advanced technologies to remove pollutants and contaminants from water to make 
-                it safe for human consumption and industrialization.</p>
+                <p>The polluted water treatment and management system is designed to collect, record and analyze
+                    water quality data, pollution sources and sanitation infrastructures that is septic tanks etc. the 
+                    system utilizes advanced technologies to remove pollutants and contaminants from water to make 
+                    it safe for human consumption and industrialization.</p>
             </div>
-           
         </div>
-        <div class="have-a-problem-section">
+        <div class="have-a-problem-section" data-animation='{"translateX": [-1000, 0], "opacity": [0, 1], "duration": 1000, "easing": "easeOutQuad"}'>
             <div class="problem-content">
-                <h2>Have a polluted problem in your area </h2>
-                <p>Lets us no asap</p>
-                <button>talk to us?</button>
+                <h2>Have a polluted problem in your area</h2>
+                <p>Let us know ASAP</p>
+                <button>Talk to us</button>
             </div>
-           
-
         </div>
         <div class="purpose-of-the-system">
-           
         </div>
-       
-<div id="google-api"></div>
+        <div id="google-api"></div>
     </main>
     <footer>
         <p>&copy; 2024 The pollutant water treatment and management system</p>
     </footer>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+$(document).ready(function() {
+    // Show the login pop-up when the button is clicked
+    $('#loginBtn').on('click', function() {
+        $('#loginPopup').fadeIn();
+        $('#overlay').fadeIn();
+    });
+
+    // Hide the login pop-up when the close button is clicked
+    $('.close-btn, #overlay').on('click', function() {
+        $('#loginPopup').fadeOut();
+        $('#overlay').fadeOut();
+    });
+
+    // Optionally, handle the form submission
+    $('#loginForm').on('submit', function(event) {
+        event.preventDefault();
+        // Perform login action here (e.g., AJAX request)
+        alert('Form submitted!');
+        // Hide the pop-up after submission
+        $('#loginPopup').fadeOut();
+        $('#overlay').fadeOut();
+    });
+});
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to animate elements
+            function animateElement(element, animation) {
+                anime({
+                    targets: element,
+                    ...animation
+                });
+            }
+
+            // Intersection Observer options
+            let options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            // Intersection Observer callback
+            let callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let element = entry.target;
+                        let animation = JSON.parse(element.getAttribute('data-animation'));
+                        animateElement(element, animation);
+                        observer.unobserve(element); // Stop observing once the animation has been triggered
+                    }
+                });
+            };
+
+            // Create the Intersection Observer
+            let observer = new IntersectionObserver(callback, options);
+
+            // Observe each section
+            document.querySelectorAll('[data-animation]').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -70,3 +70,7 @@ h1 {
     position: absolute;
     bottom: 5%;
 }
+.hero-image img{
+    width: 50%;
+    height: 400px;
+}

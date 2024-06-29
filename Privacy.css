@@ -1,0 +1,26 @@
+.main{
+    margin-left: 20%;
+    margin-right:20% ;
+}
+.privacy h2{
+    color: #02527c;
+    font-size: 24px;
+    font-family: neuzeit-grotesk,sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -.48px;
+}
+.privacy p{
+    color: #585858;
+    font-size: 18px;
+    font-family: ff-real-text-pro,sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.privacy ul li{
+    color: #585858;
+    font-size: 18px;
+    font-family: ff-real-text-pro,sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+}
