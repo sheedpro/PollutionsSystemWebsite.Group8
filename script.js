@@ -17,11 +17,11 @@ drop.addEventListener('click', function(){
     toggle= !toggle;
     if(toggle)
     {
-        img.src="assets/images/icon-plus.svg";
+        img.src="Assets/Images/icons8-plus-50.png";
     }
     else
     {
-        img.src="assets/images/icon-minus.svg"
+        img.src="Assets/Images/icons8-minus-50.png"
     }
 })
 
@@ -29,11 +29,11 @@ drop2.addEventListener('click', function(){
     toggle= !toggle;
     if(toggle)
     {
-        img2.src="assets/images/icon-plus.svg";
+        img2.src="Assets/Images/icons8-plus-50.png";
     }
     else
     {
-        img2.src="assets/images/icon-minus.svg"
+        img2.src="Assets/Images/icons8-minus-50.png"
     }
 })
 
@@ -41,11 +41,11 @@ drop3.addEventListener('click', function(){
     toggle= !toggle;
     if(toggle)
     {
-        img3.src="assets/images/icon-plus.svg";
+        img3.src="Assets/Images/icons8-plus-50.png";
     }
     else
     {
-        img3.src="assets/images/icon-minus.svg"
+        img3.src="Assets/Images/icons8-minus-50.png"
     }
 })
 
@@ -53,10 +53,22 @@ drop4.addEventListener('click', function(){
     toggle= !toggle;
     if(toggle)
     {
-        img4.src="assets/images/icon-plus.svg";
+        img4.src="Assets/Images/icons8-plus-50.png";
     }
     else
     {
-        img4.src="assets/images/icon-minus.svg"
+        img4.src="Assets/Images/icons8-minus-50.png"
     }
 })
+
+let animation = anime({
+    targets: 'div',
+    // Properties 
+    translateX: 100,
+    borderRadius: 50,
+    // Property Parameters
+    duration: 2000,
+    easing: 'linear',
+    // Animation Parameters
+    direction: 'alternate'
+  }); 
